@@ -1,0 +1,16 @@
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\bin\Debug\VideoMonetizer.exe.config
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\bin\Debug\VideoMonetizer.exe
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\bin\Debug\VideoMonetizer.pdb
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\bin\Debug\Interop.WMPLib.dll
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\Interop.WMPLib.dll
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.csproj.ResolveComReference.cache
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.Form1.resources
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.Properties.Resources.resources
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.csproj.GenerateResource.Cache
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.exe
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.pdb
+C:\Users\GKasztelaniec\source\repos\VideoMonetizer\VideoMonetizer\obj\Debug\VideoMonetizer.csprojResolveAssemblyReference.cache
