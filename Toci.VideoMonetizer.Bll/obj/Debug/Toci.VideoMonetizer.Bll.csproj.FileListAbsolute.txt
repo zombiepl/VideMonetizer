@@ -1,0 +1,7 @@
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\bin\Debug\Toci.VideoMonetizer.Bll.dll
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\bin\Debug\Toci.VideoMonetizer.Bll.pdb
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\obj\Debug\Toci.VideoMonetizer.Bll.csprojResolveAssemblyReference.cache
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\obj\Debug\Toci.VideoMonetizer.Bll.dll
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll\obj\Debug\Toci.VideoMonetizer.Bll.pdb

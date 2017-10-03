@@ -51,6 +51,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\IUiElementsTranslation.cs" />
+    <Compile Include="Logic\UiElementsTranslation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -114,6 +116,16 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toci.VideoMonetizer.Bll.Interfaces\Toci.VideoMonetizer.Bll.Interfaces.csproj">
+      <Project>{e45768cc-ddee-445a-8f89-cb17ea51d5e5}</Project>
+      <Name>Toci.VideoMonetizer.Bll.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.VideoMonetizer.Bll\Toci.VideoMonetizer.Bll.csproj">
+      <Project>{382e68ff-7e1a-4815-879d-06e0d9154184}</Project>
+      <Name>Toci.VideoMonetizer.Bll</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

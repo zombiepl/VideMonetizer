@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
+using Toci.VideoMonetizer.Bll;
+using Toci.VideoMonetizer.Bll.DataEntities;
+using Toci.VideoMonetizer.Bll.Interfaces;
+using Toci.VideoMonetizer.Bll.Interfaces.DataEntities;
+using VideoMonetizer.Logic;
 
 namespace VideoMonetizer
 {
@@ -139,18 +145,24 @@ namespace VideoMonetizer
 
         private void button2_Click_1(object sender, EventArgs e)//savefile
         {
+            //fStorage.Save(new VideoReferenceMatchEntity());
+
             SaveFileDialog save = new SaveFileDialog();
             save.FileName = "DefaultOutputName.txt";
             save.Filter = "Toci files|*.tci";
+
+            //IStorage fStorage = new Storage(save.OpenFile());
+            IUiElementsTranslation uiTranslation = new UiElementsTranslation();
+
             if (save.ShowDialog() == DialogResult.OK)
             {
-                StreamWriter writer = new StreamWriter(save.OpenFile());
-                foreach (ListViewItem item in listView1.Items)
-                {
-                    writer.WriteLine(item.SubItems[0].Text +";"+item.SubItems[1].Text + ";" + item.SubItems[2].Text+ ";" + item.SubItems[3].Text+ "#");
-                }
-                writer.Dispose();
-                writer.Close();
+                // 
+                List<IVideoReferenceMatchEntity> vRefMatchEnt = uiTranslation.GetVideoReferenes(listView1);
+
+                //fStorage.Save(vRefMatchEnt);
+
+                //writer.WriteLine(item.SubItems[0].Text + ";" + item.SubItems[1].Text + ";" + item.SubItems[2].Text + ";" + item.SubItems[3].Text + "#");
+
             }
         }
 

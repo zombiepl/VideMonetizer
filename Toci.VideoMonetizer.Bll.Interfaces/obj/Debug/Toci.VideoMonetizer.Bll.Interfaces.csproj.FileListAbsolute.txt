@@ -1,0 +1,4 @@
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
+C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
