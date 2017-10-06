@@ -1,7 +1,9 @@
 ﻿using System.IO;
 using System.IO.IsolatedStorage;
+using System.Windows.Forms;
 using Toci.VideoMonetizer.Bll.Interfaces;
 using Toci.VideoMonetizer.Bll.Interfaces.DataEntities;
+
 
 namespace Toci.VideoMonetizer.Bll
 {
@@ -9,24 +11,41 @@ namespace Toci.VideoMonetizer.Bll
     {
         public const string Delimiter = ";";
 
-        protected string Path;
+        //protected string Path;
 
-        public Storage(string path)
-        {
-            Path = path;
-        }
-
-
+        //public Storage(string path)
+        //{
+        //    Path = path;
+        //}
+        SaveFileDialog save = new SaveFileDialog();
+                               
         public virtual bool Save(IVideoReferenceMatchEntity videoMatch)
-        {
-            // save.OpenFile() save file patch ?
-            using (StreamWriter writer = new StreamWriter(Path))
+        {    //przyjmuje jako parametr wszystkie obiekty implelentujące interfejs            
+
+            //save.OpenFile() save file patch ?
+            SaveFileDialog save = new SaveFileDialog();
+            save.FileName = "DefaultOutputName.tci";
+            save.Filter = "Toci files|*.tci";
+            
+            if (save.ShowDialog() == DialogResult.OK)
             {
-                writer.WriteLine(videoMatch.BaseMovie + Delimiter + videoMatch.ReferencedMovie + Delimiter + videoMatch.TimeBaseMovie + Delimiter + videoMatch.TimeReferenced + "#");
+              
+              //????  List<IVideoReferenceMatchEntity> vRefMatchEnt = uiTranslation.GetVideoReferenes(listView1);
 
-                writer.Close();
+
+                using (StreamWriter writer = new StreamWriter(save.OpenFile()))
+                {
+
+                    foreach (var writerlista in listView1)
+                    {
+                        writer.WriteLine(videoMatch.BaseMovie + Delimiter + videoMatch.ReferencedMovie + Delimiter +
+                                         videoMatch.TimeBaseMovie + Delimiter + videoMatch.TimeReferenced + "#");
+                    }
+                   
+
+                    writer.Close();
+                }
             }
-
             return true;
         }
     }

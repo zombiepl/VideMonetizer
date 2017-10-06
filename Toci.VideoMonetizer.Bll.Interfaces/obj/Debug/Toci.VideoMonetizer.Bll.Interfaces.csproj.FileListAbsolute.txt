@@ -2,3 +2,9 @@ C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\
 C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
 C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
 C:\Users\Warrior\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\bin\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.dll
+C:\Users\GKasztelaniec\Documents\VideMonetizer\Toci.VideoMonetizer.Bll.Interfaces\obj\Debug\Toci.VideoMonetizer.Bll.Interfaces.pdb
