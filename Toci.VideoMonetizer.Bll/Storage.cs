@@ -1,8 +1,11 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.IO.IsolatedStorage;
 using System.Windows.Forms;
+using Toci.VideoMonetizer.Bll.DataEntities;
 using Toci.VideoMonetizer.Bll.Interfaces;
 using Toci.VideoMonetizer.Bll.Interfaces.DataEntities;
+
 
 
 namespace Toci.VideoMonetizer.Bll
@@ -19,7 +22,7 @@ namespace Toci.VideoMonetizer.Bll
         //}
         SaveFileDialog save = new SaveFileDialog();
                                
-        public virtual bool Save(IVideoReferenceMatchEntity videoMatch)
+        public virtual bool Save(List<IVideoReferenceMatchEntity> videoMatchList)
         {    //przyjmuje jako parametr wszystkie obiekty implelentujące interfejs            
 
             //save.OpenFile() save file patch ?
@@ -27,6 +30,7 @@ namespace Toci.VideoMonetizer.Bll
             save.FileName = "DefaultOutputName.tci";
             save.Filter = "Toci files|*.tci";
             
+
             if (save.ShowDialog() == DialogResult.OK)
             {
               
@@ -35,14 +39,11 @@ namespace Toci.VideoMonetizer.Bll
 
                 using (StreamWriter writer = new StreamWriter(save.OpenFile()))
                 {
-
-                    foreach (var writerlista in listView1)
+                    foreach (var item in videoMatchList)
                     {
-                        writer.WriteLine(videoMatch.BaseMovie + Delimiter + videoMatch.ReferencedMovie + Delimiter +
-                                         videoMatch.TimeBaseMovie + Delimiter + videoMatch.TimeReferenced + "#");
+                        writer.WriteLine(item.BaseMovie + Delimiter + item.ReferencedMovie + Delimiter + item.TimeBaseMovie + Delimiter + item.TimeReferenced + "#");
                     }
-                   
-
+                    
                     writer.Close();
                 }
             }

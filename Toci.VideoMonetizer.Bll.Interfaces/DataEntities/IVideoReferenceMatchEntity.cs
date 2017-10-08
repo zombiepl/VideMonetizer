@@ -4,6 +4,8 @@ namespace Toci.VideoMonetizer.Bll.Interfaces.DataEntities
 {
     public interface IVideoReferenceMatchEntity//<ReferenceMatchList>//dodany generyk
     {
+
+        
         string BaseMovie { get; set; }
 
         string ReferencedMovie { get; set; }
@@ -15,3 +17,5 @@ namespace Toci.VideoMonetizer.Bll.Interfaces.DataEntities
       //  List<ReferenceMatchList> ReferenceMatchLists {get;set;}//dodane
     }
 }
+
+

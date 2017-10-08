@@ -13,9 +13,14 @@ namespace VideoMonetizer
 {
     public partial class Form1 : Form
     {
-        private List<VideoReferenceMatchEntity> _videoReferenceMatchEntities = new List<VideoReferenceMatchEntity>();
-        private VideoReferenceMatchEntity _videoReferenceMatchEntity;
-        public ListViewItem listviewitem;
+        private List<IVideoReferenceMatchEntity> _videoReferenceMatchEntities = new List<IVideoReferenceMatchEntity>();
+      //  private VideoReferenceMatchEntity _videoReferenceMatchEntity;
+        private ListViewItem _listviewitem;
+        private List<ListViewItem> _listViewItems = new List<ListViewItem>();
+        private VideoReferenceMatchEntity vrme; //def. zmiennej vrme typu ten obiekt
+
+        //UiElementsTranslation listviewitem = new UiElementsTranslation();
+
 
 
         public Form1()
@@ -70,39 +75,36 @@ namespace VideoMonetizer
             
 
         }
-       
+
 
         private void button1_Click(object sender, EventArgs e)//przenieś
         {
-            
+
             if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying || axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPaused)
             {
+                _listviewitem = new ListViewItem(axWindowsMediaPlayer1.currentMedia.name);
+                _listviewitem.SubItems.Add(axWindowsMediaPlayer2.currentMedia.name);
+                _listviewitem.SubItems.Add(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString);
+                _listviewitem.SubItems.Add(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString);
+                listView1.Items.Add(_listviewitem);
 
-                //do metody wypelniajacej videoReferenceMatchEntity
-                //uzupelenienie obiektu _videoReferenceMatchEntity
-                _videoReferenceMatchEntity = new VideoReferenceMatchEntity();
-                _videoReferenceMatchEntity.BaseMovie = axWindowsMediaPlayer1.currentMedia.name;
-                //newList.SubItems.Add(axWindowsMediaPlayer2.currentMedia.name);
-                _videoReferenceMatchEntity.ReferencedMovie = axWindowsMediaPlayer2.currentMedia.name;
-                //newList.SubItems.Add(axWindowsMediaPlayer1.Ctlcontrols.currentPositionString);
-                _videoReferenceMatchEntity.TimeBaseMovie = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-                //newList.SubItems.Add(axWindowsMediaPlayer2.Ctlcontrols.currentPositionString);
-                _videoReferenceMatchEntity.TimeReferenced = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;
-                _videoReferenceMatchEntities.Add(_videoReferenceMatchEntity);
 
-            
-                    listviewitem =new ListViewItem(_videoReferenceMatchEntity.BaseMovie);
-                    listviewitem.SubItems.Add(_videoReferenceMatchEntity.ReferencedMovie);
-                    listviewitem.SubItems.Add(_videoReferenceMatchEntity.TimeBaseMovie);
-                    listviewitem.SubItems.Add(_videoReferenceMatchEntity.TimeReferenced);
-                    listView1.Items.Add(listviewitem);//wyjeba© do metody zapisujácej na listview1
-                    
+                _listViewItems.Add(_listviewitem);
+                //======================== fill vrme object
+                
+                /*
+                vrme = new VideoReferenceMatchEntity();
+                vrme.TimeBaseMovie = axWindowsMediaPlayer1.currentMedia.name;
+                vrme.BaseMovie = axWindowsMediaPlayer2.currentMedia.name;
+                vrme.ReferencedMovie = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
+                vrme.TimeReferenced = axWindowsMediaPlayer2.Ctlcontrols.currentPositionString;*/
+
             }
             else
             {
                 MessageBox.Show("Main Movie is nor played or paused");
             }
-                
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -161,30 +163,22 @@ namespace VideoMonetizer
             }
         }
 
+        
         private void button2_Click_1(object sender, EventArgs e)//savefile
         {
             //Storage storage = new Storage(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
-            Storage storage = new Storage();
-            storage.Save(_videoReferenceMatchEntity); 
-            //fStorage.Save(new VideoReferenceMatchEntity());
+           Storage storage = new Storage();
+           //storage.Save(_videoReferenceMatchEntity); 
 
-            //SaveFileDialog save = new SaveFileDialog();
-            //save.FileName = "DefaultOutputName.txt";
-            //save.Filter = "Toci files|*.tci";
-
-            //IStorage fStorage = new Storage(save.OpenFile());
             IUiElementsTranslation uiTranslation = new UiElementsTranslation();
 
-            //if (save.ShowDialog() == DialogResult.OK)
-            //{
-            //    // 
-            //    List<IVideoReferenceMatchEntity> vRefMatchEnt = uiTranslation.GetVideoReferenes(listView1);
+            foreach (var item in _listViewItems)
+            {
+                _videoReferenceMatchEntities = uiTranslation.GetVideoReferenes(item);
+            }
 
-                //fStorage.Save(vRefMatchEnt);
 
-                //writer.WriteLine(item.SubItems[0].Text + ";" + item.SubItems[1].Text + ";" + item.SubItems[2].Text + ";" + item.SubItems[3].Text + "#");
-
-            //}
+            storage.Save(_videoReferenceMatchEntities);
         }
 
         private void button5_Click(object sender, EventArgs e)//exit
